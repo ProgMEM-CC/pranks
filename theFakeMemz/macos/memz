@@ -1,0 +1,70 @@
+#!/bin/zsh
+
+echo -n "Do you want to run the funny MEMZ Prank? [y/n]: "
+read choice
+
+case "$choice" in 
+  y|Y|1|yes|Yes|yEs|yeS|YEs|YeS|yES|YES ) echo "Continuing...";;
+  n|N|0|no|No|nO|NO ) echo "Exiting..."; exit 0;;
+  * ) echo "Invalid input. Please enter y or n."; exit 1;;
+esac
+
+echo -n "Do you really want to run the memz prank? [y/n]: "
+read choice
+
+case "$choice" in 
+  y|Y|1|yes|Yes|yEs|yeS|YEs|YeS|yES|YES ) echo "Continuing...";;
+  n|N|0|no|No|nO|NO ) echo "Exiting..."; exit 0;;
+  * ) echo "Invalid input. Please enter y or n."; exit 1;;
+esac
+
+echo "The memz Prank writes a modified version of ffplay to /tmp/ffplay, and a fake video to /tmp/memz.mov"
+sleep 2
+echo "Exit the memz prank by switching to a different macOS Desktop or restarting this device."
+sleep 2
+echo "Press ^CONTROL and < Left arrow or > Right arrow multiple times until you reach your original desktop to exit the full screen prank."
+sleep 1
+echo "If Apple Trackpad is being used, swipe right or left with three fingers until you reach your original desktop."
+sleep 3
+echo "Alternatively, press the Mission Control button."
+sleep 5
+echo "Afterwards press CONTROL + C (click on Terminal first)."
+sleep 2
+echo "The Developer(s) are not liable to any damage caused by this script, even though such damage is highly unlikely."
+sleep 6
+
+echo -n "Do you agree to the terms and conditions? [y/n]: "
+read choice
+
+case "$choice" in 
+  y|Y|1|yes|Yes|yEs|yeS|YEs|YeS|yES|YES ) echo "Continuing...";;
+  n|N|0|no|No|nO|NO ) echo "Exiting..."; exit 0;;
+  * ) echo "Invalid input. Please enter y or n."; exit 1;;
+esac
+
+# LICENSE SECTION – DO NOT MODIFY
+curl -o /tmp/license_memz 
+cat /tmp/license_memz
+sleep 3
+
+echo -n "Do you agree to the GNU GENERAL PUBLIC LICENSE v3? [y/n]: "
+read choice
+
+case "$choice" in 
+  y|Y|1|yes|Yes|yEs|yeS|YEs|YeS|yES|YES ) echo "Continuing...";;
+  n|N|0|no|No|nO|NO ) echo "Exiting..."; exit 0;;
+  * ) echo "Invalid input. Please enter y or n."; exit 1;;
+esac
+
+echo "Downloading binary..."
+curl -o /tmp/ffplay_mod 
+
+echo "Extracting frameworks..."
+sleep 3
+
+echo "Downloading dependencies..."
+curl -o /tmp/memz.mov 
+
+echo "Done setup."
+
+/tmp/ffplay_mod -fs -loop 0 /tmp/memz.mov
