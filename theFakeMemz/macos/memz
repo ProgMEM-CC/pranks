@@ -43,7 +43,7 @@ case "$choice" in
 esac
 
 # LICENSE SECTION – DO NOT MODIFY
-curl -o /tmp/license_memz 
+curl -o /tmp/license_memz "https://raw.githubusercontent.com/ProgMEM-CC/pranks/refs/heads/main/theFakeMemz/macos/LICENSE"
 cat /tmp/license_memz
 sleep 3
 
