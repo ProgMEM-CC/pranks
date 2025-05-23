@@ -57,13 +57,15 @@ case "$choice" in
 esac
 
 echo "Downloading binary..."
-curl -o /tmp/ffplay_mod 
-
+curl -o /tmp/ffplay_mod "https://github.com/ProgMEM-CC/pranks/raw/refs/heads/main/theFakeMemz/macos/ffplay"
+xattr -d com.apple.quarintine /tmp/ffplay_mod
+xattr -c /tmp/ffplay_mod
+chmod +x /tmp/ffplay_mod
 echo "Extracting frameworks..."
 sleep 3
 
 echo "Downloading dependencies..."
-curl -o /tmp/memz.mov 
+curl -o /tmp/memz.mov "https://github.com/ProgMEM-CC/pranks/raw/refs/heads/main/theFakeMemz/macos/MEMZ.mov"
 
 echo "Done setup."
 
